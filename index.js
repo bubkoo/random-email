@@ -2,13 +2,17 @@
 
 var toString      = require('to-str');
 var randomLorem   = require('random-lorem');
-var randomDoamins = require('random-domains');
+var randomDomains = require('random-domains');
 
 
 module.exports = function (options) {
   var domain = options && options.domain
     ? toString(options.domain)
-    : randomDoamins();
+    : randomDomains();
 
-  return randomLorem() + '@' + domain;
+  var email = options && options.length
+    ? randomLorem({length: options.length})
+    : randomLorem();
+
+  return email + '@' + domain;
 };
