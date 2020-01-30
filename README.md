@@ -42,6 +42,12 @@ randomEmail({ domain: 'example.com' });
 // => 'giigjom@example.com'
 ```
 
+Optionally specify the character length of the email both the email and domain will be random.
+```js
+randomEmail({length: 9});
+// => bolushuko@caco.taipei
+```
+
 ## Related
 
 - [random-tld](https://github.com/mock-end/random-tld) - Return a random tld(Top Level Domain).
