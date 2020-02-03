@@ -15,6 +15,6 @@ describe('random-email: ', function () {
   });
 
   it('randomEmail({ length: 9 })', function () {
-    expect(randomEmail({ length: 9})).to.be.match(/^([a-zA-Z0-9_-]{1,9})+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/)
+    expect(randomEmail({ length: 9})).to.be.match(/^([a-zA-Z0-9_-]{1,9})([0-9]+)+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/)
   })
 });

@@ -3,6 +3,7 @@
 var toString      = require('to-str');
 var randomLorem   = require('random-lorem');
 var randomDomains = require('random-domains');
+var randomNumber = Math.floor(Math.random() * 50 + 1);
 
 
 module.exports = function (options) {
@@ -14,5 +15,5 @@ module.exports = function (options) {
     ? randomLorem({length: options.length})
     : randomLorem();
 
-  return email + '@' + domain;
+  return email + randomNumber.toString() + '@' + domain;
 };
